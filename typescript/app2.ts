@@ -1,69 +1,7 @@
-class Car {
-  private model: string;
-  private numberOfDoors: number;
-  private speed: number = 0;
-
-  constructor(model: string, doors: number) {
-    this.model = model;
-    this.numberOfDoors = doors;
-  }
-
-  public acelerate(): void {
-    this.speed += 10;
-  }
-  public stop(): void {
-    this.speed = 0;
-  }
-
-  public currentSpeed(): number {
-    return this.speed;
-  }
-}
-
-class DealershipCar {
-  private adress: string;
-  private carList: Array<Car>;
-
-  constructor(adress: string, list: Array<Car>) {
-    this.adress = adress;
-    this.carList = list;
-  }
-
-  public showAdress(): string {
-    return this.adress;
-  }
-
-  public showCarList(): Array<Car> {
-    return this.carList;
-  }
-}
-
-class People {
-  private name: string;
-  private favoriteCar: string;
-  private car: Car;
-
-  constructor(name: string, favorite: string) {
-    this.name = name;
-    this.favoriteCar = favorite;
-  }
-
-  public sayName(): string {
-    return this.name;
-  }
-
-  public sayFavoriteCar(): string {
-    return this.favoriteCar;
-  }
-
-  public buyCar(car: Car): void {
-    this.car = car;
-  }
-
-  public sayWhatCarHave(): Car {
-    return this.car;
-  }
-}
+import Car from "./Car";
+import Motorcycle from "./Moto";
+import DealershipCar from "./Dealership";
+import People from "./People";
 
 /* create cars */
 
@@ -92,3 +30,7 @@ dealershipCar.showCarList().map((car: Car) => {
 });
 
 console.log(p1.sayWhatCarHave());
+
+let curinga = new DealershipCar("", []);
+
+console.log(curinga.provideWorkingHours());

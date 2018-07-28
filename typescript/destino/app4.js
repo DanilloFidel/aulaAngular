@@ -1,0 +1,25 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var DealershipDAO_1 = require("./DealershipDAO");
+var PeopleDAO_1 = require("./PeopleDAO");
+var MotoDAO_1 = require("./MotoDAO");
+var CarDAO_1 = require("./CarDAO");
+var Dealership_1 = __importDefault(require("./Dealership"));
+var People_1 = __importDefault(require("./People"));
+var Car_1 = __importDefault(require("./Car"));
+var Moto_1 = __importDefault(require("./Moto"));
+var dao = new DealershipDAO_1.DealershipDAO();
+var dao2 = new PeopleDAO_1.PeopleDAO();
+var dao3 = new CarDAO_1.CarDAO();
+var dao4 = new MotoDAO_1.MotorbykeDAO();
+var cc1 = new Dealership_1.default("Joao XVIII", []);
+var p1 = new People_1.default("José", "Mustang");
+var m1 = new Moto_1.default(150);
+var car1 = new Car_1.default("Fusca", 4);
+dao.insert(cc1);
+dao2.update(p1);
+dao3.insert(car1);
+dao4.update(m1);
