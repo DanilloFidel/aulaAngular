@@ -15,15 +15,15 @@ var Dao = /** @class */ (function () {
     };
     Dao.prototype.remove = function (id) {
         console.log("logica REMOVE");
-        return new People("", "");
+        return Object();
     };
     Dao.prototype.select = function (id) {
         console.log("logica SELECT");
-        return new People("", "");
+        return Object();
     };
     Dao.prototype.selectAll = function () {
         console.log("SELECT *");
-        return [new People("", "")];
+        return [Object()];
     };
     return Dao;
 }());

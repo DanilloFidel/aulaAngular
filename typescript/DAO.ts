@@ -2,25 +2,25 @@ import { DAOInterface } from "./DAOInterface";
 
 export class Dao<T> implements DAOInterface<T> {
   tableName: string = "name_dealership";
-  insert(object: People): boolean {
+  insert(object: T): boolean {
     //lógica de um insert
     console.log("logica de um INSERT");
     return true;
   }
-  update(object: People): boolean {
+  update(object: T): boolean {
     console.log("logica UPDATE");
     return true;
   }
-  remove(id: number): People {
+  remove(id: number): T {
     console.log("logica REMOVE");
-    return new People("", "");
+    return Object();
   }
-  select(id: number): People {
+  select(id: number): T {
     console.log("logica SELECT");
-    return new People("", "");
+    return Object()
   }
   selectAll(): [any] {
     console.log("SELECT *");
-    return [new People("", "")];
+    return [Object()];
   }
 }
