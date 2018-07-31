@@ -1,5 +1,1 @@
-<img src="/assets/coracao_cheio.png" alt="">
-<img src="/assets/coracao_cheio.png" alt="">
-<img src="/assets/coracao_cheio.png" alt="">
-<img src="/assets/coracao_cheio.png" alt="">
-<img src="/assets/coracao_cheio.png" alt="">
+<img *ngFor="let hearth of hearths" [src]="hearth.showHearth()" />

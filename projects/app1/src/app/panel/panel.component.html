@@ -2,27 +2,27 @@
     <div class="jumbotron">
         <div class="row">
             <div class="col-sm-6">
-                <app-progress></app-progress>
+                <app-progress [progress]='progress'></app-progress>
             </div>
             <div class="col-sm-6">
                 <div class="d-flex justify-content-end">
-                    <app-attempts></app-attempts>
+                    <app-attempts [attempts]="attempts"></app-attempts>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <h6>Traduza a frase:</h6>
-                <p>How are you?</p>
+                <h6>{{instruction}}</h6>
+                <p>{{turnPhrase.engPhrase}}</p>
                 <div class="form-group">
-                    <textarea class="form-control" rows="3"></textarea>
+                    <textarea class="form-control" rows="3" (input)="updateAnswer($event)" [value]="answer"></textarea>
                 </div>
             </div>
         </div>
         <div class="row row-btn">
             <div class="col">
                 <div class="d-flex justify-content-end">
-                    <button type="button" class="btn btn-primary">Verificar</button>
+                    <button type="button" class="btn btn-primary" (click)="checkAnswer()">Verificar</button>
                 </div>
             </div>
         </div>
