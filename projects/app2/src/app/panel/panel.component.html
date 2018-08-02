@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col" align="center">
+        <h3>{{instruction}}</h3>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6" align="center">
+        <img src="{{nameSrc}}" alt="">
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <textarea class="form-control" cols="5" rows="1" placeholder="Digite sem letras maiusculas" (input)="caughtAnswer($event)"
+            [value]="answer"></textarea>
+          <p>{{msg}}</p>
+          <div class="d-flex justify-content-center">
+            <button (click)="checkAnswer()" class="btn btn-primary">Verificar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-sm-6">
+        <app-progress [progress]="progress"></app-progress>
+      </div>
+      <div class="col-sm-6">
+        <app-lifes [attempts]="attempts"></app-lifes>
+      </div>
+    </div>
+  </div>
+</div>

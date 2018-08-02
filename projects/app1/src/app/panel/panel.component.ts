@@ -31,7 +31,7 @@ export class PanelComponent implements OnInit {
   ngOnInit() {}
 
   ngOnDestroy(): void {}
-
+  //collect user answer
   public updateAnswer(answer: Event): void {
     this.answer = (<HTMLInputElement>answer.target).value;
   }

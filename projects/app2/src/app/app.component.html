@@ -1,0 +1,24 @@
+<app-header></app-header>
+<div *ngIf="isRuning; else youWin">
+    <app-panel (endOfGame)="endOfGame($event)"></app-panel>
+</div>
+<ng-template #youWin>
+    <div *ngIf="end == 'win'; else youLose" class="container" align="center" style="margin-top: 6%">
+        <div class="row">
+            <div class="col">
+                <h3 style="color: green">Muito bem! Você conhece muitos heróis e vilões dos quadrinhos.</h3>
+                <button class="btn btn-primary" (click)="restartGame()" style="margin-top: 5%">Reiniciar</button>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<ng-template #youLose>
+    <div class="container" align="center" style="margin-top: 6%">
+        <div class="row">
+            <div class="col">
+                <h3 style="color: red">Fim de jogo, você perdeu!</h3>
+                <button class="btn btn-primary" (click)="restartGame()" style="margin-top: 5%">Reiniciar</button>
+            </div>
+        </div>
+    </div>
+</ng-template>

@@ -1,0 +1,28 @@
+img {
+  width: 300px;
+  height: 300px;
+  margin-top: 5%;
+}
+
+textarea {
+  margin-top: 30%;
+  width: 300px;
+  border: 2px solid gray;
+}
+
+.jumbotron {
+  margin-bottom: 0;
+  padding: 2% 2%;
+  margin-top: 5%;
+  height: auto;
+}
+
+.btn {
+  margin-top: 3%;
+}
+
+p {
+  color: red;
+  font-weight: bold;
+  margin-top: 3%;
+}

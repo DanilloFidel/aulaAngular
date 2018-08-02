@@ -1,0 +1,25 @@
+import { Name } from "../shared/name.model";
+export const NAMES: Name[] = [
+  { nameAswer: "deadpool" },
+  { nameAswer: "ravena" },
+  { nameAswer: "homem aranha" },
+  { nameAswer: "nova" },
+  { nameAswer: "besouro azul" },
+  { nameAswer: "electro" },
+  { nameAswer: "galactus" },
+  { nameAswer: "homem de ferro" },
+  { nameAswer: "surfista prateado" },
+  { nameAswer: "visao" },
+  { nameAswer: "hulkbuster" },
+  { nameAswer: "mutano" },
+  { nameAswer: "cabeça de martelo" },
+  { nameAswer: "demolidor" },
+  { nameAswer: "hella" },
+  { nameAswer: "doutor estranho" },
+  { nameAswer: "gamora" },
+  { nameAswer: "gaviao arqueiro" },
+  { nameAswer: "heimdall" },
+  { nameAswer: "luke cage" },
+  { nameAswer: "rhino" },
+  { nameAswer: "senhor das estrelas" }
+];
