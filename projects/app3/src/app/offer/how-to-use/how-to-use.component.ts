@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+import { OffersService } from "../../offers.service";
 
 @Component({
-  selector: 'app-how-to-use',
-  templateUrl: './how-to-use.component.html',
-  styleUrls: ['./how-to-use.component.css']
+  selector: "app-how-to-use",
+  templateUrl: "./how-to-use.component.html",
+  styleUrls: ["./how-to-use.component.css"],
+  providers: [OffersService]
 })
 export class HowToUseComponent implements OnInit {
-
-  constructor() { }
+  public desc: string = "";
+  constructor(
+    private offerService: OffersService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
+    this.offerService
+      .getHowtoUseById(this.route.parent.snapshot.params["id"])
+      .then((response: any) => {
+        this.desc = response;
+      });
   }
-
 }

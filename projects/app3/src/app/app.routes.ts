@@ -14,9 +14,13 @@ export const ROUTES: Routes = [
   { path: "restaurantes", component: RestaurantComponent },
   { path: "diversao", component: FunComponent },
   { path: "oferta", component: HomeComponent },
-  { path: "oferta/:id", component: OfferComponent, 
-  children: [
-    { path: 'como-usar', component: }
-  ]
-}
+  {
+    path: "oferta/:id",
+    component: OfferComponent,
+    children: [
+      { path: "", component: HowToUseComponent },
+      { path: "como-usar", component: HowToUseComponent },
+      { path: "onde-fica", component: WhereIsComponent }
+    ]
+  }
 ];
