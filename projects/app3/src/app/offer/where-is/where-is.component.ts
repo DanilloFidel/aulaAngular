@@ -1,8 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, OnDestroy } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { OffersService } from "../../offers.service";
-import { Observable, Observer } from "rxjs";
-import { interval } from "rxjs";
 
 @Component({
   selector: "app-where-is",
@@ -10,8 +8,9 @@ import { interval } from "rxjs";
   styleUrls: ["./where-is.component.css"],
   providers: [OffersService]
 })
-export class WhereIsComponent implements OnInit {
+export class WhereIsComponent implements OnInit, OnDestroy {
   public howUse: string = "";
+
   constructor(
     private offerService: OffersService,
     private route: ActivatedRoute
@@ -23,24 +22,7 @@ export class WhereIsComponent implements OnInit {
       .then((response: any) => {
         this.howUse = response;
       });
-    /*
-    let time = interval(3000); //criamos um observable
-
-    time.subscribe((interval: any) => {
-      //assistindo esse observable apartir de um subscribe
-      console.log(interval);
-    });
-
-    */
-
-    //observable (observável)
-    let myTestObservable = Observable.create((observer: Observer<string>) => {
-      observer.next("primeiro next");
-      observer.next("segundo next");
-    });
-    //observable (observador)
-    myTestObservable.subscribe((result: string) => {
-      console.log(result);
-    });
   }
+
+  ngOnDestroy() {}
 }
