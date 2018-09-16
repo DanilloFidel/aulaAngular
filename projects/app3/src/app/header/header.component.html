@@ -1,19 +1,19 @@
 <div class="fixed-top">
   <nav class="navbar navbar-light bg-light">
     <div class="container">
-      <div class="row">
-        <div class="col-md-4" style="background-color: green">
-          <a routerLink="" class="navbar-brand">
+      <div class="row bar-nav">
+        <div class="col-md-3">
+          <a routerLink="" class="navbar-brand logo">
             <img src="/assets/logo.png" />
           </a>
         </div>
-        <div class="col-md-6" style="background-color: red">
+        <div class="col-md-6 search">
           <input type="text" class="form-control" placeholder="Pesquise por ofertas..." #searchValue (keyup)="search(searchValue.value)">
-          <ul class="list-group" style="position: absolute">
+          <ul class="list-group">
             <li class="list-group-item disabled" *ngFor="let item of offersList">{{item.titulo}}</li>
           </ul>
         </div>
-        <div class="col-md-2" style="background-color: blue">
+        <div class="col-md-3 cart">
           <a a href="#">
             <img src="/assets/carrinho.png" />
           </a>
