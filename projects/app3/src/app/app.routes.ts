@@ -7,6 +7,7 @@ import { FunComponent } from "./fun/fun.component";
 import { OfferComponent } from "./offer/offer.component";
 import { HowToUseComponent } from "./offer/how-to-use/how-to-use.component";
 import { WhereIsComponent } from "./offer/where-is/where-is.component";
+import { OrderBuyComponent } from "./order-buy/order-buy.component";
 
 export const ROUTES: Routes = [
   //cria-se os caminhos
@@ -22,5 +23,6 @@ export const ROUTES: Routes = [
       { path: "como-usar", component: HowToUseComponent },
       { path: "onde-fica", component: WhereIsComponent }
     ]
-  }
+  },
+  {path: "ordem-compra", component: OrderBuyComponent}
 ];
