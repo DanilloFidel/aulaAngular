@@ -46,7 +46,7 @@
 .list-group{
   position: absolute;
   margin-top: 2.4em;
-  z-index: 2;
+  z-index: 999;
 }
 
 .logo{

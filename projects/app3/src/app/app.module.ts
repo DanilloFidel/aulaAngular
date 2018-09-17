@@ -17,6 +17,9 @@ import { registerLocaleData } from "@angular/common";
 import localePt from "@angular/common/locales/pt";
 registerLocaleData(localePt);
 
+//pipes
+import { ShortDescription } from "./util/short-desc.pipe";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +30,8 @@ registerLocaleData(localePt);
     FunComponent,
     OfferComponent,
     HowToUseComponent,
-    WhereIsComponent
+    WhereIsComponent,
+    ShortDescription
   ],
   imports: [BrowserModule, HttpModule, RouterModule.forRoot(ROUTES)],
   providers: [{ provide: LOCALE_ID, useValue: "pt" }],

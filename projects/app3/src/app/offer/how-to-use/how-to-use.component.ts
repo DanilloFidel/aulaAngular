@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Params } from '@angular/router';
 import { OffersService } from "../../offers.service";
 
 @Component({
@@ -16,10 +16,14 @@ export class HowToUseComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.offerService
+
+    this.route.params.subscribe((parameters: Params)=>{
+      this.offerService
       .getHowtoUseById(this.route.parent.snapshot.params["id"])
       .then((response: any) => {
         this.desc = response;
       });
+      parameters.id
+    })
   }
 }

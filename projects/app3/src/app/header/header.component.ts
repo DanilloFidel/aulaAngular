@@ -18,7 +18,6 @@ import {
 })
 export class HeaderComponent implements OnInit {
   private result: Observable<Offer[]>;
-  private offersList: Offer[];
   private subjectSearch: Subject<string> = new Subject<string>();
   constructor(private offerService: OffersService) {}
 
@@ -44,15 +43,14 @@ export class HeaderComponent implements OnInit {
         return of<Offer[]>([]); //retornando um array vazio
       })
     );
-
-    this.result.subscribe((offers: Offer[]) => {
-      console.log(offers);
-      this.offersList = offers;
-    });
   }
 
   public search(searchValue: string): void {
     console.log("keyup caracter :", searchValue);
     this.subjectSearch.next(searchValue);
+  }
+
+  public cleanSearch(): void{
+    this.subjectSearch.next("")
   }
 }

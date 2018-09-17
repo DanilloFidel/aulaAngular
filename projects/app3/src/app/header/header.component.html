@@ -10,7 +10,9 @@
         <div class="col-md-6 search">
           <input type="text" class="form-control" placeholder="Pesquise por ofertas..." #searchValue (keyup)="search(searchValue.value)">
           <ul class="list-group">
-            <li class="list-group-item disabled" *ngFor="let item of offersList">{{item.titulo}}</li>
+            <li class="list-group-item disabled" *ngFor="let item of result | async">
+              <a [routerLink]="['/oferta', item.id]" (click)="cleanSearch()">{{item.titulo | shortDescription:15}}</a>
+            </li>
           </ul>
         </div>
         <div class="col-md-3 cart">
