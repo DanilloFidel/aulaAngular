@@ -20,6 +20,7 @@ registerLocaleData(localePt);
 //pipes
 import { ShortDescription } from "./util/short-desc.pipe";
 import { OrderBuyComponent } from './order-buy/order-buy.component';
+import { OrderBuySuccessComponent } from './order-buy-success/order-buy-success.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { OrderBuyComponent } from './order-buy/order-buy.component';
     HowToUseComponent,
     WhereIsComponent,
     ShortDescription,
-    OrderBuyComponent
+    OrderBuyComponent,
+    OrderBuySuccessComponent
   ],
   imports: [BrowserModule, HttpModule, RouterModule.forRoot(ROUTES)],
   providers: [{ provide: LOCALE_ID, useValue: "pt" }],

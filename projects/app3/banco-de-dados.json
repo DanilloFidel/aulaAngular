@@ -9,10 +9,18 @@
       "valor": 29.9,
       "destaque": true,
       "imagens": [
-        { "url": "/assets/ofertas/1/img1.jpg" },
-        { "url": "/assets/ofertas/1/img2.jpg" },
-        { "url": "/assets/ofertas/1/img3.jpg" },
-        { "url": "/assets/ofertas/1/img4.jpg" }
+        {
+          "url": "/assets/ofertas/1/img1.jpg"
+        },
+        {
+          "url": "/assets/ofertas/1/img2.jpg"
+        },
+        {
+          "url": "/assets/ofertas/1/img3.jpg"
+        },
+        {
+          "url": "/assets/ofertas/1/img4.jpg"
+        }
       ]
     },
     {
@@ -24,10 +32,18 @@
       "valor": 32.9,
       "destaque": true,
       "imagens": [
-        { "url": "/assets/ofertas/2/img1.jpg" },
-        { "url": "/assets/ofertas/2/img2.jpg" },
-        { "url": "/assets/ofertas/2/img3.jpg" },
-        { "url": "/assets/ofertas/2/img4.jpg" }
+        {
+          "url": "/assets/ofertas/2/img1.jpg"
+        },
+        {
+          "url": "/assets/ofertas/2/img2.jpg"
+        },
+        {
+          "url": "/assets/ofertas/2/img3.jpg"
+        },
+        {
+          "url": "/assets/ofertas/2/img4.jpg"
+        }
       ]
     },
     {
@@ -39,28 +55,47 @@
       "valor": 21.9,
       "destaque": false,
       "imagens": [
-        { "url": "/assets/ofertas/3/img1.jpg" },
-        { "url": "/assets/ofertas/3/img2.jpg" },
-        { "url": "/assets/ofertas/3/img3.jpg" },
-        { "url": "/assets/ofertas/3/img4.jpg" }
+        {
+          "url": "/assets/ofertas/3/img1.jpg"
+        },
+        {
+          "url": "/assets/ofertas/3/img2.jpg"
+        },
+        {
+          "url": "/assets/ofertas/3/img3.jpg"
+        },
+        {
+          "url": "/assets/ofertas/3/img4.jpg"
+        }
       ]
     },
     {
       "id": 4,
       "categoria": "diversao",
       "titulo": "Estância das águas",
-      "descricao_oferta":
-        "Diversão garantida com piscinas, trilhas e muito mais.",
+      "descricao_oferta": "Diversão garantida com piscinas, trilhas e muito mais.",
       "anunciante": "Estância das águas",
       "valor": 31.9,
       "destaque": true,
       "imagens": [
-        { "url": "/assets/ofertas/4/img1.jpg" },
-        { "url": "/assets/ofertas/4/img2.jpg" },
-        { "url": "/assets/ofertas/4/img3.jpg" },
-        { "url": "/assets/ofertas/4/img4.jpg" },
-        { "url": "/assets/ofertas/4/img5.jpg" },
-        { "url": "/assets/ofertas/4/img6.jpg" }
+        {
+          "url": "/assets/ofertas/4/img1.jpg"
+        },
+        {
+          "url": "/assets/ofertas/4/img2.jpg"
+        },
+        {
+          "url": "/assets/ofertas/4/img3.jpg"
+        },
+        {
+          "url": "/assets/ofertas/4/img4.jpg"
+        },
+        {
+          "url": "/assets/ofertas/4/img5.jpg"
+        },
+        {
+          "url": "/assets/ofertas/4/img6.jpg"
+        }
       ]
     },
     {
@@ -72,26 +107,32 @@
       "valor": 54.9,
       "destaque": false,
       "imagens": [
-        { "url": "/assets/ofertas/5/img1.jpg" },
-        { "url": "/assets/ofertas/5/img2.jpg" }
+        {
+          "url": "/assets/ofertas/5/img1.jpg"
+        },
+        {
+          "url": "/assets/ofertas/5/img2.jpg"
+        }
       ]
     },
     {
       "id": 6,
       "categoria": "diversao",
       "titulo": "Academia de tiro",
-      "descricao_oferta":
-        "Sessão de tiro dinâmico com Instrutor, Estande, Alvo e Equipamentos.",
+      "descricao_oferta": "Sessão de tiro dinâmico com Instrutor, Estande, Alvo e Equipamentos.",
       "anunciante": "Academia de Tiro",
       "valor": 89.9,
       "destaque": false,
       "imagens": [
-        { "url": "/assets/ofertas/6/img1.jpg" },
-        { "url": "/assets/ofertas/6/img2.jpg" }
+        {
+          "url": "/assets/ofertas/6/img1.jpg"
+        },
+        {
+          "url": "/assets/ofertas/6/img2.jpg"
+        }
       ]
     }
   ],
-
   "como-usar": [
     {
       "id": 1,
@@ -111,15 +152,13 @@
     },
     {
       "id": 5,
-      "descricao":
-        "Válido de segunda a sábado das 12h as 23h. Necessário agendamento prévio"
+      "descricao": "Válido de segunda a sábado das 12h as 23h. Necessário agendamento prévio"
     },
     {
       "id": 6,
       "descricao": "Não é necessário agendar. Sujeito à fila."
     }
   ],
-
   "onde-fica": [
     {
       "id": 1,
@@ -144,6 +183,57 @@
     {
       "id": 6,
       "descricao": "Estrada Maria das Graças, 12, Salvador - BA "
+    }
+  ],
+  "produtos": [
+    {
+      "adress": "asasas",
+      "number": "sasa",
+      "payMethod": "",
+      "complement": "asa",
+      "id": 1
+    },
+    {
+      "adress": "rua  dezessete",
+      "number": "80",
+      "payMethod": "",
+      "complement": "ap04",
+      "id": 2
+    },
+    {
+      "adress": "rua trinra",
+      "number": "855",
+      "payMethod": "",
+      "complement": "89",
+      "id": 3
+    },
+    {
+      "adress": "rua tretet",
+      "number": "887",
+      "payMethod": "",
+      "complement": "878",
+      "id": 4
+    },
+    {
+      "adress": "rua quatorze",
+      "number": "145",
+      "payMethod": "",
+      "complement": "44",
+      "id": 5
+    },
+    {
+      "adress": "eddedeed",
+      "number": "899",
+      "payMethod": "",
+      "complement": "885",
+      "id": 6
+    },
+    {
+      "adress": "rua sentoo",
+      "number": "788",
+      "payMethod": "",
+      "complement": "d88",
+      "id": 7
     }
   ]
 }

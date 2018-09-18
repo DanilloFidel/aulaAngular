@@ -8,6 +8,7 @@ import { OfferComponent } from "./offer/offer.component";
 import { HowToUseComponent } from "./offer/how-to-use/how-to-use.component";
 import { WhereIsComponent } from "./offer/where-is/where-is.component";
 import { OrderBuyComponent } from "./order-buy/order-buy.component";
+import { OrderBuySuccessComponent } from "./order-buy-success/order-buy-success.component";
 
 export const ROUTES: Routes = [
   //cria-se os caminhos
@@ -24,5 +25,6 @@ export const ROUTES: Routes = [
       { path: "onde-fica", component: WhereIsComponent }
     ]
   },
-  {path: "ordem-compra", component: OrderBuyComponent}
+  {path: "ordem-compra", component: OrderBuyComponent},
+  {path: "ordem-compra-sucesso",component: OrderBuySuccessComponent}
 ];
