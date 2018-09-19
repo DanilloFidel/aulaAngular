@@ -1,7 +1,8 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { OrderBuyService } from '../order-buy.service';
 import { Order } from '../shared/orders.model';
-import { NgForm } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-order-buy',
@@ -10,8 +11,16 @@ import { NgForm } from '@angular/forms';
   providers: [ OrderBuyService ]
 })
 export class OrderBuyComponent implements OnInit {
+
+  public idOrder: number
+
+  public form: FormGroup = new FormGroup({
+    "adress": new FormControl(null, [Validators.required, Validators.minLength(5), Validators.maxLength(120)]),
+    "number": new FormControl(null, [Validators.required, Validators.minLength(1), Validators.maxLength(10)]),
+    "complement": new FormControl(null, [Validators.maxLength(80)]),
+    "payMethod" : new FormControl(null, [Validators.required])
+  })
   
-  @ViewChild('form') public form: NgForm;
   constructor(private OrderBuyService: OrderBuyService){}
 
   ngOnInit(){
@@ -19,6 +28,19 @@ export class OrderBuyComponent implements OnInit {
   }
 
   public getFormValues(): void{
-    console.log(this.form)
+    if(this.form.status === 'INVALID'){
+      this.form.get('adress').markAsTouched();
+      this.form.get('number').markAsTouched();
+      this.form.get('payMethod').markAsTouched();
+    }else{
+      let order: Order = new Order(
+        this.form.value.adress,
+        this.form.value.number,
+        this.form.value.complement,
+        this.form.value.payMethod
+        )
+      this.OrderBuyService.effectBuy(order)
+      .subscribe((idOrder: number)=> this.idOrder = idOrder)
+    }
   }
 }

@@ -2,7 +2,8 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule, LOCALE_ID } from "@angular/core";
 import { HttpModule } from "@angular/http";
 import { RouterModule } from "@angular/router";
-import { FormsModule } from "@angular/forms";
+//import { FormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./header/header.component";
@@ -38,7 +39,7 @@ import { OrderBuySuccessComponent } from './order-buy-success/order-buy-success.
     OrderBuyComponent,
     OrderBuySuccessComponent
   ],
-  imports: [BrowserModule, HttpModule, FormsModule, RouterModule.forRoot(ROUTES)],
+  imports: [BrowserModule, HttpModule, ReactiveFormsModule , RouterModule.forRoot(ROUTES)],
   providers: [{ provide: LOCALE_ID, useValue: "pt" }],
   bootstrap: [AppComponent]
 })
