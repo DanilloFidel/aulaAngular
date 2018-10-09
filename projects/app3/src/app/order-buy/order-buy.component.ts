@@ -1,14 +1,16 @@
 import { Component, OnInit} from '@angular/core';
-import { OrderBuyService } from '../order-buy.service';
 import { Order } from '../shared/orders.model';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+
+import { OrderBuyService } from '../order-buy.service';
+import ShoppingCartService from '../shopping-cart.service';
 
 
 @Component({
   selector: 'app-order-buy',
   templateUrl: './order-buy.component.html',
   styleUrls: ['./order-buy.component.css'],
-  providers: [ OrderBuyService ]
+  providers: [ OrderBuyService , ShoppingCartService ]
 })
 export class OrderBuyComponent implements OnInit {
 
@@ -21,10 +23,13 @@ export class OrderBuyComponent implements OnInit {
     "payMethod" : new FormControl(null, [Validators.required])
   })
   
-  constructor(private OrderBuyService: OrderBuyService){}
+  constructor(
+    private OrderBuyService: OrderBuyService,
+    private cartService: ShoppingCartService
+    ){}
 
   ngOnInit(){
-      
+      console.log(this.cartService.showItem())
   }
 
   public getFormValues(): void{

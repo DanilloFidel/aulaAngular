@@ -186,6 +186,12 @@
     }
   ],
   "produtos": [
-    
+    {
+      "adress": "rua doze",
+      "number": "3000",
+      "payMethod": "babla",
+      "complement": "dinheiro",
+      "id": 1
+    }
   ]
 }
