@@ -2,7 +2,6 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule, LOCALE_ID } from "@angular/core";
 import { HttpModule } from "@angular/http";
 import { RouterModule } from "@angular/router";
-//import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
@@ -23,6 +22,7 @@ registerLocaleData(localePt);
 import { ShortDescription } from "./util/short-desc.pipe";
 import { OrderBuyComponent } from './order-buy/order-buy.component';
 import { OrderBuySuccessComponent } from './order-buy-success/order-buy-success.component';
+import { ShoppingCartService } from "./shopping-cart.service";
 
 @NgModule({
   declarations: [
@@ -40,7 +40,7 @@ import { OrderBuySuccessComponent } from './order-buy-success/order-buy-success.
     OrderBuySuccessComponent
   ],
   imports: [BrowserModule, HttpModule, ReactiveFormsModule , RouterModule.forRoot(ROUTES)],
-  providers: [{ provide: LOCALE_ID, useValue: "pt" }],
+  providers: [ ShoppingCartService, { provide: LOCALE_ID, useValue: "pt" }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

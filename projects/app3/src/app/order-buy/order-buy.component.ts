@@ -3,14 +3,15 @@ import { Order } from '../shared/orders.model';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { OrderBuyService } from '../order-buy.service';
-import ShoppingCartService from '../shopping-cart.service';
+import { ShoppingCartService } from '../shopping-cart.service';
+
 
 
 @Component({
   selector: 'app-order-buy',
   templateUrl: './order-buy.component.html',
   styleUrls: ['./order-buy.component.css'],
-  providers: [ OrderBuyService , ShoppingCartService ]
+  providers: [ OrderBuyService ]
 })
 export class OrderBuyComponent implements OnInit {
 
@@ -29,7 +30,7 @@ export class OrderBuyComponent implements OnInit {
     ){}
 
   ngOnInit(){
-      console.log(this.cartService.showItem())
+      
   }
 
   public getFormValues(): void{

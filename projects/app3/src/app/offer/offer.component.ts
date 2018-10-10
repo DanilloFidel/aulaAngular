@@ -3,14 +3,14 @@ import { ActivatedRoute, Params } from "@angular/router";
 import { Offer } from "../shared/offer.model";
 
 import { OffersService } from "../offers.service";
-import ShoppingCartService from '../shopping-cart.service';
+import { ShoppingCartService } from '../shopping-cart.service';
 
 
 @Component({
   selector: "app-offer",
   templateUrl: "./offer.component.html",
   styleUrls: ["./offer.component.css"],
-  providers: [OffersService, ShoppingCartService]
+  providers: [OffersService]
 })
 export class OfferComponent implements OnInit {
   public offer: Offer;
@@ -18,14 +18,11 @@ export class OfferComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private offerService: OffersService,
-    private itenShoppingCart: ShoppingCartService
+    private shoppingCartService: ShoppingCartService
     ) {}
     
     ngOnInit() {
      
-    console.log("offer component "+ this.itenShoppingCart.showItem());
-      
-
     this.route.params.subscribe((parameters: Params)=>{
       this.offerService
       .getOfferById(this.route.snapshot.params["id"])
@@ -38,8 +35,8 @@ export class OfferComponent implements OnInit {
     }
 
     public addItemToCart(): void{
-      this.itenShoppingCart.addItem(this.offer)
-      console.log(this.offer)
+      this.shoppingCartService.addItem(this.offer)
+      this.shoppingCartService.showItens()
     }
   }
   
