@@ -17,7 +17,7 @@ import {
   providers: [OffersService]
 })
 export class HeaderComponent implements OnInit {
-  private result: Observable<Offer[]>;
+  public result: Observable<Offer[]>;
   private subjectSearch: Subject<string> = new Subject<string>();
   constructor(private offerService: OffersService) {}
 
