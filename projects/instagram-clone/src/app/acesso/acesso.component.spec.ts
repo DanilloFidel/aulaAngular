@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AcessoComponent } from './acesso.component';
+import { BannerComponent } from './banner/banner.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 describe('AcessoComponent', () => {
   let component: AcessoComponent;
@@ -8,7 +10,11 @@ describe('AcessoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AcessoComponent ]
+      declarations: [
+        AcessoComponent,
+        BannerComponent,
+        CadastroComponent
+       ]
     })
     .compileComponents();
   }));
