@@ -35,10 +35,11 @@ export const PANELANIMATION =
       opacity: 0,
       transform: 'translate(50px, 0)'
   }),
+  // 0 void -----x------------------------x----x--x------- 1.5s ----- x criado -->>>>>> temos uma animação sem delay
   animate('1.5s 0s ease-in-out',
   keyframes([
     style({
-      offset: 0.15,
+      offset: 0.15, // valor definido pela porcentagem com base na duração
       opacity: 1,
       transform: 'translateX(0)'
     }),
@@ -58,9 +59,14 @@ export const PANELANIMATION =
       transform: 'translateY(10px)'
     }),
     style({
-      offset: 1,
+      offset: 0.92,
       opacity: 1,
-      transform: 'translateX(0)'
+      transform: 'translateY(-10px)'
+    }),
+    style({
+      offset: 0.95,
+      opacity: 1,
+      transform: 'translateY(10px)'
     })
   ]))
   ])
