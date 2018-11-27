@@ -31,7 +31,11 @@ export class CadastroComponent implements OnInit {
 
   public cadastrarUsuario(): void{
     if(this.formulario.valid){
-      this.authService.cadastrarUsuario(this.criarNovoUsuario());
+      this.authService.cadastrarUsuario(this.criarNovoUsuario())
+      .then((resposta)=>{
+        console.log(resposta)
+        this.exibirPainelDeLogin();
+      });
     }
   }
 

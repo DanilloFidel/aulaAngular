@@ -1,0 +1,33 @@
+[debug] [2018-11-23T03:12:21.780Z] ----------------------------------------------------------------------
+[debug] [2018-11-23T03:12:21.783Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\danil\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2018-11-23T03:12:21.783Z] CLI Version:   6.1.1
+[debug] [2018-11-23T03:12:21.784Z] Platform:      win32
+[debug] [2018-11-23T03:12:21.784Z] Node Version:  v10.10.0
+[debug] [2018-11-23T03:12:21.785Z] Time:          Fri Nov 23 2018 01:12:21 GMT-0200 (GMT-02:00)
+[debug] [2018-11-23T03:12:21.785Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-11-23T03:12:21.804Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-11-23T03:12:21.805Z] > authorizing via signed-in user
+[debug] [2018-11-23T03:12:21.805Z] [iam] checking project jta-instagram-clone-2c6d2 for permissions ["firebase.projects.get"]
+[debug] [2018-11-23T03:12:21.809Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/jta-instagram-clone-2c6d2:testIamPermissions  
+
+[debug] [2018-11-23T03:12:23.696Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-23T03:12:23.697Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/jta-instagram-clone-2c6d2  
+ 
+[debug] [2018-11-23T03:12:25.215Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\danil\OneDrive\Documentos\Web-DEV\aulaAngular\projects\instagram-clone'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-11-23T03:12:26.152Z] Fetching environment
+[debug] [2018-11-23T03:12:26.155Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/313311069401:getServerAppConfig  
+ 
+[debug] [2018-11-23T03:12:26.155Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/313311069401/clients/_:getWebAppConfig  
+ 
+[debug] [2018-11-23T03:12:27.221Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-23T03:12:27.221Z] Starting @google-cloud/functions-emulator
+[debug] [2018-11-23T03:12:28.225Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2018-11-23T03:12:29.317Z] Parsing function triggers
+[info] i  functions: No HTTPS functions found. Use firebase functions:shell if you would like to emulate other types of functions.
