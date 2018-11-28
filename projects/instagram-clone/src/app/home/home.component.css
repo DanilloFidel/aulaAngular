@@ -17,4 +17,9 @@
     width: 32px;
     height: 32px;
     float: left;
+    cursor: pointer
+}
+
+.logout{
+  margin-left: 5px;
 }

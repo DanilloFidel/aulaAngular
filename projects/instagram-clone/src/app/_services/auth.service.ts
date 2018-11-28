@@ -6,6 +6,7 @@ import { Router } from "@angular/router";
 @Injectable()
 export class AuthService{
   public token_id: string;
+  public possuiToken: boolean;
 
   constructor(private router: Router){}
 
@@ -28,6 +29,7 @@ export class AuthService{
       firebase.auth().currentUser.getIdToken()
       .then((idToken)=> {
         this.setTokenId(idToken);
+        sessionStorage.setItem('#', idToken);
         this.router.navigate(['/home']);
       })
     })
@@ -36,8 +38,28 @@ export class AuthService{
 
   private setTokenId(token: string): void{
     this.token_id = token;
+    this.possuiToken = true;
   };
 
+  public estaAutenticado(): boolean{
+    this.getTokenStorage();
+    return this.token_id !== undefined;
+  }
 
+  private getTokenStorage(): void{
+    let token = sessionStorage.getItem("#");
+    if( token !== null){
+      this.setTokenId(token);
+    }
+  }
+
+  public logout(): void{
+    this.router.navigate(['']);
+    firebase.auth().signOut()
+    .then(()=>{
+      sessionStorage.removeItem("#");
+      this.token_id = undefined;
+    })
+  }
 
 }
